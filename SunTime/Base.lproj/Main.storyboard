@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yfg-zH-Efa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="iSl-N9-9pM">
+            <objects>
+                <viewController id="M30-R7-BiW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OBP-R6-Ucp"/>
+                        <viewControllerLayoutGuide type="bottom" id="uuq-Yz-hVF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OH9-fn-sD3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="cPq-uJ-7AH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25S-NW-gQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="758"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zCG-t2-BrK">
+            <objects>
+                <tabBarController id="Yfg-zH-Efa" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="jF0-kZ-DZI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="wSr-vI-AYe"/>
+                        <segue destination="M30-R7-BiW" kind="relationship" relationship="viewControllers" id="BDv-jz-uTW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFS-Py-paL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933" y="426"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SunTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZd-Wk-zcO">
+                                <rect key="frame" x="264" y="135" width="71.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sun rise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-RU-l3L">
+                                <rect key="frame" x="270" y="164" width="60" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sun set" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cit-eB-Rj1">
+                                <rect key="frame" x="272" y="192" width="56" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mid time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-x0-H7f">
+                                <rect key="frame" x="266" y="220" width="66.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-aI-u3T">
+                                <rect key="frame" x="253" y="248" width="92" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIx-F6-moe">
+                                <rect key="frame" x="272" y="106" width="57" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="LZd-Wk-zcO" secondAttribute="centerY" constant="154.5" id="Dzf-ey-yUS"/>
+                            <constraint firstAttribute="centerX" secondItem="Wvc-RU-l3L" secondAttribute="centerX" constant="-0.5" id="EwP-DS-EcY"/>
+                            <constraint firstAttribute="centerX" secondItem="7ov-x0-H7f" secondAttribute="centerX" constant="0.5" id="H2H-VK-FdH"/>
+                            <constraint firstAttribute="centerX" secondItem="Cit-eB-Rj1" secondAttribute="centerX" id="MeP-wp-ZEl"/>
+                            <constraint firstAttribute="centerY" secondItem="Wvc-RU-l3L" secondAttribute="centerY" constant="125.75" id="UU4-oC-Yac"/>
+                            <constraint firstAttribute="centerY" secondItem="MZd-aI-u3T" secondAttribute="centerY" constant="41.75" id="VKI-PN-fVv"/>
+                            <constraint firstAttribute="centerY" secondItem="Cit-eB-Rj1" secondAttribute="centerY" constant="97.75" id="eJN-9K-KwE"/>
+                            <constraint firstAttribute="centerY" secondItem="sIx-F6-moe" secondAttribute="centerY" constant="183.5" id="ivq-wT-w3Y"/>
+                            <constraint firstAttribute="centerX" secondItem="sIx-F6-moe" secondAttribute="centerX" id="jc2-BX-fxh"/>
+                            <constraint firstAttribute="centerX" secondItem="MZd-aI-u3T" secondAttribute="centerX" constant="1" id="nhI-dQ-YlV"/>
+                            <constraint firstAttribute="centerY" secondItem="7ov-x0-H7f" secondAttribute="centerY" constant="69.75" id="pIi-B1-Pdr"/>
+                            <constraint firstAttribute="centerX" secondItem="LZd-Wk-zcO" secondAttribute="centerX" id="wzW-Ze-hAu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="c2A-6c-lyo"/>
+                    <connections>
+                        <outlet property="curTimeLbl" destination="MZd-aI-u3T" id="qOU-Vq-Rdo"/>
+                        <outlet property="latitudeLbl" destination="sIx-F6-moe" id="1BE-gE-0hz"/>
+                        <outlet property="longitudeLbl" destination="LZd-Wk-zcO" id="eR6-vx-leS"/>
+                        <outlet property="midTimeLbl" destination="7ov-x0-H7f" id="elN-WV-ubF"/>
+                        <outlet property="sunRiseLbl" destination="Wvc-RU-l3L" id="Hj4-J7-45q"/>
+                        <outlet property="sunSetLbl" destination="Cit-eB-Rj1" id="4zw-8i-SLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="98"/>
+        </scene>
+    </scenes>
+</document>
