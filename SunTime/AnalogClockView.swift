@@ -135,9 +135,6 @@ import UIKit
         self.min.degree = CGFloat(components.minute * 6) + self.sec.degree / 60
         self.hour.degree = CGFloat(components.hour * 30) + self.min.degree / 12
         
-//        self.sec.degree %= 360
-//        Hand.rotateHand(self.sec, degree: self.sec.degree)
-        
         UIView.animateWithDuration(1.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
             self.sec.transform = CGAffineTransformMakeRotation(self.sec.degree * self.PI / 180)
             self.min.transform = CGAffineTransformMakeRotation(self.min.degree * self.PI / 180)

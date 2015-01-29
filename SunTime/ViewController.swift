@@ -95,6 +95,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.offset = -midDate.timeIntervalSinceDate(realMidDate)
         let sunDate = NSDate().dateByAddingTimeInterval(offset)
         self.curTimeLbl.text = "Солнечное время " + self.sunTime.stringFromDate(sunDate)
+        
+        self.analogClock.dateOffset = offset
     }
 
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
