@@ -17,9 +17,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var sunSetLbl: UILabel!
     @IBOutlet weak var midTimeLbl: UILabel!
     @IBOutlet weak var curTimeLbl: UILabel!
+    @IBOutlet weak var analogClock: AnalogClockView!
+
+    @IBAction func onClockClick(sender: AnyObject) {
+        println(analogClock.dateOffset)
+        if analogClock.dateOffset == 0 {
+            analogClock.dateOffset = self.offset
+        } else {
+            analogClock.dateOffset = 0
+        }
+    }
     
     var locationManager: CLLocationManager!
     let sunTime = SunTime()
+    var offset: NSTimeInterval!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,9 +92,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let components = calendar.components(NSCalendarUnit.YearCalendarUnit | NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.DayCalendarUnit | NSCalendarUnit.TimeZoneCalendarUnit, fromDate: NSDate())
         var realMidDate = calendar.dateFromComponents(components)!
         realMidDate = realMidDate.dateByAddingTimeInterval(12 * 3600) // 12:00
-        let offset = -midDate.timeIntervalSinceDate(realMidDate)
+        self.offset = -midDate.timeIntervalSinceDate(realMidDate)
         let sunDate = NSDate().dateByAddingTimeInterval(offset)
         self.curTimeLbl.text = "Солнечное время " + self.sunTime.stringFromDate(sunDate)
+    }
+
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+//        analogClock.setNeedsDisplay()
     }
 
     override func didReceiveMemoryWarning() {
